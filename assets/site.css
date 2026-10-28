@@ -181,3 +181,43 @@ body.has-sticky footer{padding-bottom:calc(120px + env(safe-area-inset-bottom,0p
   main.sub{padding-top:64px}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* ---------- hero: the offer ---------- */
+.hero .lead{font-size:18px;margin:0 auto 20px;max-width:360px}
+.hero .offer{display:flex;align-items:baseline;justify-content:center;gap:12px;margin-bottom:22px}
+.hero .offer s{font-size:22px;font-weight:600;text-decoration:line-through;text-decoration-thickness:3px;text-decoration-color:#ff2bd6}
+.hero .offer b{font-family:Outfit,Sora,sans-serif;font-weight:900;font-size:clamp(52px,14vw,68px);letter-spacing:-.05em;line-height:1}
+.hero .offer i{font-style:normal;font-size:15px;font-weight:600}
+@media(min-width:768px){.hero .lead{font-size:20px;max-width:440px}}
+
+/* ---------- animated blue/purple wash behind the game posters ---------- */
+.hero,.reelwrap{position:relative;isolation:isolate;overflow:hidden}
+.reelwrap{padding:26px 0}
+.hero::before,.hero::after,.reelwrap::before,.reelwrap::after{
+  content:"";position:absolute;inset:-25% -15%;z-index:-1;pointer-events:none;
+  filter:blur(46px);will-change:transform;
+  /* the layer overhangs the section, so fade it out before its lower edge
+     instead of letting the glow stop dead against the black below */
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 56%,transparent 84%);
+  mask-image:linear-gradient(180deg,#000 0%,#000 56%,transparent 84%)}
+/* two layers drifting at different speeds so the glow never looks like a loop */
+.hero::before,.reelwrap::before{background:
+  radial-gradient(38% 44% at 20% 28%,rgba(45,110,255,.60) 0%,rgba(45,110,255,0) 70%),
+  radial-gradient(42% 48% at 78% 34%,rgba(150,45,255,.55) 0%,rgba(150,45,255,0) 70%);
+  animation:wash1 19s ease-in-out infinite alternate}
+.hero::after,.reelwrap::after{background:
+  radial-gradient(46% 40% at 55% 78%,rgba(96,24,255,.45) 0%,rgba(96,24,255,0) 72%),
+  radial-gradient(34% 38% at 8% 72%,rgba(43,224,255,.28) 0%,rgba(43,224,255,0) 70%);
+  animation:wash2 26s ease-in-out infinite alternate}
+@keyframes wash1{
+  from{transform:translate3d(-4%,-2%,0) scale(1)}
+  to{transform:translate3d(5%,3%,0) scale(1.12)}}
+@keyframes wash2{
+  from{transform:translate3d(4%,2%,0) scale(1.08)}
+  to{transform:translate3d(-5%,-3%,0) scale(1)}}
+@media(prefers-reduced-motion:reduce){
+  .hero::before,.hero::after,.reelwrap::before,.reelwrap::after{animation:none}}
+/* the mid-page strip has black above it as well, so fade both ends there */
+.reelwrap::before,.reelwrap::after{
+  -webkit-mask-image:linear-gradient(180deg,transparent 4%,#000 24%,#000 56%,transparent 82%);
+  mask-image:linear-gradient(180deg,transparent 4%,#000 24%,#000 56%,transparent 82%)}
