@@ -181,3 +181,11 @@ body.has-sticky footer{padding-bottom:calc(120px + env(safe-area-inset-bottom,0p
   main.sub{padding-top:64px}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* ---------- hero: the offer ---------- */
+.hero .lead{font-size:18px;margin:0 auto 20px;max-width:360px}
+.hero .offer{display:flex;align-items:baseline;justify-content:center;gap:12px;margin-bottom:22px}
+.hero .offer s{font-size:22px;font-weight:600;text-decoration:line-through;text-decoration-thickness:3px;text-decoration-color:#ff2bd6}
+.hero .offer b{font-family:Outfit,Sora,sans-serif;font-weight:900;font-size:clamp(52px,14vw,68px);letter-spacing:-.05em;line-height:1}
+.hero .offer i{font-style:normal;font-size:15px;font-weight:600}
+@media(min-width:768px){.hero .lead{font-size:20px;max-width:440px}}
