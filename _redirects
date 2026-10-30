@@ -1,0 +1,8 @@
+/pay /checkout/ 301
+/pay.html /checkout/ 301
+/checkout.html /checkout/ 301
+/terms.html /terms/ 301
+/privacy.html /privacy/ 301
+/refunds.html /refunds/ 301
+/contact.html /contact/ 301
+/thanks.html /thanks/ 301
