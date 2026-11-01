@@ -3,62 +3,57 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>robloxai.dev</title>
+<title>Privacy | BloxCEO</title>
+<meta name="description" content="How BloxCEO handles your data.">
+<link rel="canonical" href="https://robloxai.dev/privacy">
+<meta name="theme-color" content="#050705">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BloxCEO">
+<meta property="og:title" content="Privacy | BloxCEO">
+<meta property="og:description" content="How BloxCEO handles your data.">
+<meta property="og:url" content="https://robloxai.dev/privacy">
+<meta property="og:image" content="https://robloxai.dev/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Outfit:wght@800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="/favicon.png" sizes="64x64">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/track.js"></script>
 </head>
-<body data-cur="us">
+<body data-cur="us" data-page="privacy">
 
 <header><nav>
-  <a href="/" aria-label="robloxai"><img src="/assets/roblox-ai-logo.png" width="1400" height="316" alt="robloxai"></a>
-  <a class="btn btn-nav" href="/checkout">Get started</a>
+  <a class="logo" href="/" aria-label="BloxCEO home"><i>B</i><span>Blox<b>CEO</b></span></a>
+  <div class="nlinks"><a href="/#why">Opportunity</a><a href="/#how">How it works</a><a href="/#get">What you get</a><a href="/#faq">FAQ</a></div>
+  <a class="btn btn-nav" href="/checkout" data-cta="nav">Get access</a>
 </nav></header>
 <div class="webview" id="wv"><a href="x-safari-https://robloxai.dev">Open in Safari to buy</a></div>
 
 <main class="sub">
   <h1>Privacy</h1>
-  <p>Last updated 21 October 2026.</p>
+  <p>Last updated 1 November 2026.</p>
   <h2>What we collect</h2>
   <p>Your email address when you buy or sign up, and your payment details, which are handled by our payment provider. We never see your full card number.</p>
   <h2>What we do with it</h2>
-  <p>Send you your purchase, the free prompt if you asked for it, and occasional updates about the course. Unsubscribe any time with the link in any email.</p>
+  <p>Send you your purchase and occasional updates about the course. Unsubscribe any time with the link in any email.</p>
   <h2>What we don't do</h2>
-  <p>We don't sell your data or share it with anyone except the services needed to run the site and take payment.</p>
-  <h2>Cookies</h2>
-  <p>Only what the site needs to work and basic analytics. No ad tracking.</p>
+  <p>We don't sell your data or share it with anyone except the services needed to run the site, measure our ads and take payment.</p>
+  <h2>Cookies and tracking</h2>
+  <p>We use what the site needs to work, basic analytics, and may use the Meta Pixel to measure how our ads perform. We remember campaign details from the link you arrived on (UTM parameters) so we know which ads work.</p>
   <h2>Your rights</h2>
   <p>Email us to see, change or delete your data: <a class="l" href="mailto:support@robloxai.dev">support@robloxai.dev</a></p>
 </main>
 
 <footer><div class="wrap">
-  <img src="/assets/roblox-ai-logo.png" width="1400" height="316" alt="robloxai">
+  <a class="logo" href="/" aria-label="BloxCEO home"><i>B</i><span>Blox<b>CEO</b></span></a>
   <nav class="flinks"><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/refunds">Refunds</a><a href="/contact">Contact</a></nav>
+  <p class="disc">BloxCEO is an independent course. It is not made, endorsed or sponsored by Roblox Corporation. Roblox is a trademark of Roblox Corporation. Results vary and earnings are never guaranteed.</p>
 </div></footer>
 
-<script>
-if(/Instagram|FBAN|FBAV|TikTok|Snapchat|Twitter|musical_ly/i.test(navigator.userAgent)){document.getElementById('wv').classList.add('on');}
-(function(){
-  var KEY='cur';
-  var links=document.querySelectorAll('.curlink');
-  function set(c){
-    document.body.setAttribute('data-cur',c);
-    document.querySelectorAll('[data-us]').forEach(function(el){el.textContent=c==='uk'?el.getAttribute('data-uk'):el.getAttribute('data-us');});
-    links.forEach(function(l){l.textContent=c==='uk'?'Need it in $? Switch here':'Need it in \u00a3? Switch here';});
-    try{localStorage.setItem(KEY,c)}catch(e){}
-  }
-  var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
-  set(saved==='uk'?'uk':'us');
-  links.forEach(function(l){l.addEventListener('click',function(e){e.preventDefault();set(document.body.getAttribute('data-cur')==='uk'?'us':'uk');});});
-
-  var first=document.querySelector('.hero .btn-big'),st=document.querySelector('.sticky');
-  if(first&&st&&'IntersectionObserver' in window){
-    new IntersectionObserver(function(en){en.forEach(function(x){st.classList.toggle('show',!x.isIntersecting&&x.boundingClientRect.top<0);});},{threshold:0}).observe(first);
-  }
-})();
-</script>
+<script src="/assets/site.js"></script>
 </body>
 </html>

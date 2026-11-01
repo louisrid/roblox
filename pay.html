@@ -3,27 +3,44 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>robloxai.dev</title>
+<title>Checkout | BloxCEO</title>
+<meta name="description" content="Secure checkout for the BloxCEO course. One-time payment, lifetime access.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://robloxai.dev/pay">
+<meta name="theme-color" content="#050705">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BloxCEO">
+<meta property="og:title" content="Checkout | BloxCEO">
+<meta property="og:description" content="Secure checkout for the BloxCEO course. One-time payment, lifetime access.">
+<meta property="og:url" content="https://robloxai.dev/pay">
+<meta property="og:image" content="https://robloxai.dev/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Outfit:wght@800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="/favicon.png" sizes="64x64">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/track.js"></script>
 </head>
-<body data-cur="us">
+<body data-cur="us" data-page="pay">
 
 <header><nav>
-  <a href="/" aria-label="robloxai"><img src="/assets/roblox-ai-logo.png" width="1400" height="316" alt="robloxai"></a>
-  <a class="btn btn-nav" href="/checkout">Back</a>
+  <a class="logo" href="/" aria-label="BloxCEO home"><i>B</i><span>Blox<b>CEO</b></span></a>
+  <div class="nlinks"><a href="/#why">Opportunity</a><a href="/#how">How it works</a><a href="/#get">What you get</a><a href="/#faq">FAQ</a></div>
+  <a class="btn btn-nav" href="/checkout" data-cta="nav">Back</a>
 </nav></header>
 <div class="webview" id="wv"><a href="x-safari-https://robloxai.dev">Open in Safari to buy</a></div>
 
 <main class="pay">
   <h1>Checkout</h1>
+  <p class="steps-ind">One-time payment · Instant access</p>
   <div class="order">
-    <div class="row"><span>robloxai course</span><b data-us="$40.00" data-uk="£30.00">$40.00</b></div>
-    <div class="row sub"><span>Free AI-built Roblox game .md file</span><b data-us="$0.00" data-uk="£0.00">$0.00</b></div>
+    <div class="row"><span>BloxCEO course</span><b data-us="$40.00" data-uk="£30.00">$40.00</b></div>
+    <div class="row sub"><span>10 video lessons, AI prompts, templates and resources</span><b>Included</b></div>
+    <div class="row sub"><span>Bonus: game idea randomiser (.md)</span><b data-us="$0.00" data-uk="£0.00">$0.00</b></div>
     <div class="row sub"><span>Lifetime access</span><b>Included</b></div>
     <div class="row total"><span>Total</span><b data-us="$40.00" data-uk="£30.00">$40.00</b></div>
   </div>
@@ -47,30 +64,11 @@
 </main>
 
 <footer><div class="wrap">
-  <img src="/assets/roblox-ai-logo.png" width="1400" height="316" alt="robloxai">
+  <a class="logo" href="/" aria-label="BloxCEO home"><i>B</i><span>Blox<b>CEO</b></span></a>
   <nav class="flinks"><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/refunds">Refunds</a><a href="/contact">Contact</a></nav>
+  <p class="disc">BloxCEO is an independent course. It is not made, endorsed or sponsored by Roblox Corporation. Roblox is a trademark of Roblox Corporation. Results vary and earnings are never guaranteed.</p>
 </div></footer>
 
-<script>
-if(/Instagram|FBAN|FBAV|TikTok|Snapchat|Twitter|musical_ly/i.test(navigator.userAgent)){document.getElementById('wv').classList.add('on');}
-(function(){
-  var KEY='cur';
-  var links=document.querySelectorAll('.curlink');
-  function set(c){
-    document.body.setAttribute('data-cur',c);
-    document.querySelectorAll('[data-us]').forEach(function(el){el.textContent=c==='uk'?el.getAttribute('data-uk'):el.getAttribute('data-us');});
-    links.forEach(function(l){l.textContent=c==='uk'?'Need it in $? Switch here':'Need it in \u00a3? Switch here';});
-    try{localStorage.setItem(KEY,c)}catch(e){}
-  }
-  var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
-  set(saved==='uk'?'uk':'us');
-  links.forEach(function(l){l.addEventListener('click',function(e){e.preventDefault();set(document.body.getAttribute('data-cur')==='uk'?'us':'uk');});});
-
-  var first=document.querySelector('.hero .btn-big'),st=document.querySelector('.sticky');
-  if(first&&st&&'IntersectionObserver' in window){
-    new IntersectionObserver(function(en){en.forEach(function(x){st.classList.toggle('show',!x.isIntersecting&&x.boundingClientRect.top<0);});},{threshold:0}).observe(first);
-  }
-})();
-</script>
+<script src="/assets/site.js"></script>
 </body>
 </html>
