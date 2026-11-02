@@ -1,140 +1,127 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>robloxai.dev</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Outfit:wght@800;900&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="/favicon.png" sizes="64x64">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
-<link rel="stylesheet" href="/assets/site.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#050705" />
+<title>CEOBLOX | Build Roblox Games With AI</title>
+<link rel="canonical" href="https://robloxai.dev/" />
+<meta property="og:title" content="CEOBLOX | Build Roblox Games With AI" />
+<meta property="og:description" content="Learn how to build, publish and explore monetising Roblox games using AI. Ten lessons, $40 one-time." />
+<meta property="og:image" content="https://robloxai.dev/assets/approved-avatar-husky.webp" />
+<meta property="og:url" content="https://robloxai.dev/" />
+<meta name="description" content="CEOBLOX: learn how to build, publish and explore monetising Roblox games using AI. Ten lessons, $40 one-time." />
+<link rel="icon" href="/favicon.png" type="image/png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+<link rel="preload" href="/assets/approved-avatar-husky.webp" as="image" type="image/webp" fetchpriority="high" />
+<link rel="preload" href="/assets/ceoblox-wordmark-white.webp" as="image" type="image/webp" />
+<link rel="stylesheet" href="/styles.css" />
+<script defer src="/config.js"></script>
+<script defer src="/site.js"></script>
 </head>
-<body class="has-sticky" data-cur="us">
-
-<header><nav>
-  <a href="#top" aria-label="robloxai"><img src="/assets/roblox-ai-logo.png" width="1400" height="316" alt="robloxai"></a>
-  <a class="btn btn-nav" href="/checkout">Get started</a>
-</nav></header>
-<div class="webview" id="wv"><a href="x-safari-https://robloxai.dev">Open in Safari to buy</a></div>
-
+<body>
+<div class="private-ribbon ticker" role="note" aria-label="CEOBLOX: build Roblox games with AI. 10 guided lessons, $40 one-time, no subscription."><div class="ticker-track" aria-hidden="true"><div class="ticker-group"><span>BUILD ROBLOX GAMES WITH AI</span><span class="ribbon-star" aria-hidden="true">✳</span><span>10 GUIDED LESSONS</span><span class="ribbon-star" aria-hidden="true">✳</span><span>$40 ONE-TIME</span><span class="ribbon-star" aria-hidden="true">✳</span><span>NO SUBSCRIPTION</span><span class="ribbon-star" aria-hidden="true">✳</span><span>AI PROMPTS &amp; TEMPLATES</span><span class="ribbon-star" aria-hidden="true">✳</span><span>CREATE. PUBLISH. MONETISE.</span><span class="ribbon-star" aria-hidden="true">✳</span><span>NO CODING EXPERIENCE NEEDED</span><span class="ribbon-star" aria-hidden="true">✳</span></div><div class="ticker-group"><span>BUILD ROBLOX GAMES WITH AI</span><span class="ribbon-star" aria-hidden="true">✳</span><span>10 GUIDED LESSONS</span><span class="ribbon-star" aria-hidden="true">✳</span><span>$40 ONE-TIME</span><span class="ribbon-star" aria-hidden="true">✳</span><span>NO SUBSCRIPTION</span><span class="ribbon-star" aria-hidden="true">✳</span><span>AI PROMPTS &amp; TEMPLATES</span><span class="ribbon-star" aria-hidden="true">✳</span><span>CREATE. PUBLISH. MONETISE.</span><span class="ribbon-star" aria-hidden="true">✳</span><span>NO CODING EXPERIENCE NEEDED</span><span class="ribbon-star" aria-hidden="true">✳</span></div></div></div>
+<div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="CEOBLOX, back to top"><img src="/assets/ceoblox-wordmark-white.webp" width="1722" height="231" alt="CEOBLOX" /></a>
+    <nav class="nav-links" aria-label="Main menu"><a href="#opportunity">THE OPPORTUNITY</a><a href="#method">THE METHOD</a><a href="#course">THE COURSE</a></nav>
+    <button class="button button-small buy-button" type="button">GET THE COURSE <span aria-hidden="true">↗</span></button>
+  </div>
+</header>
 <main id="top">
-
-<div class="hero">
-  <div class="reel" role="region" aria-label="Game examples" tabindex="0">
-    <figure class="poster" style="--c1:#2be0ff;--c2:#7b2bff"><img src="/assets/neon.webp" width="941" height="529" alt="Neon hub" fetchpriority="high"><em class="tag">Hub</em><figcaption><b>Neon hub</b><span>Multiplayer open world</span></figcaption></figure>
-    <figure class="poster" style="--c1:#ff8a2b;--c2:#ff2bd6"><img src="/assets/dragon.webp" width="995" height="560" alt="Dragon realms" loading="lazy"><em class="tag">RPG</em><figcaption><b>Dragon realms</b><span>Fantasy RPG</span></figcaption></figure>
-    <figure class="poster" style="--c1:#2be0ff;--c2:#b6ff3a"><img src="/assets/castle.webp" width="841" height="473" alt="Sky castle" loading="lazy"><em class="tag">Explore</em><figcaption><b>Sky castle</b><span>Explore map</span></figcaption></figure>
-    <figure class="poster" style="--c1:#ff3d00;--c2:#ff0066"><img src="/assets/arena.webp" width="972" height="546" alt="Battle arena" loading="lazy"><em class="tag">PvP</em><figcaption><b>Battle arena</b><span>PvP combat</span></figcaption></figure>
-    <figure class="poster" style="--c1:#b31cff;--c2:#ff2bd6"><img src="/assets/plaza.webp" width="941" height="529" alt="Town plaza" loading="lazy"><em class="tag">Social</em><figcaption><b>Town plaza</b><span>Trading and pets</span></figcaption></figure>
-    <figure class="poster" style="--c1:#ffd23a;--c2:#ff8a2b"><img src="/assets/market.webp" width="940" height="528" alt="Egg market" loading="lazy"><em class="tag">Economy</em><figcaption><b>Egg market</b><span>Hatch and trade</span></figcaption></figure>
-  </div>
-  <div class="wrap">
-    <h1>Build Roblox Games With AI</h1>
-    <p class="lead">Type what you want. The AI writes the code.</p>
-    <div class="offer"><s data-us="$195" data-uk="£90">$195</s><b data-us="$40" data-uk="£30">$40</b><i>one-time</i></div>
-    <a class="btn btn-big" href="/checkout">Get started</a>
-    <p class="guar">30-day money-back guarantee</p>
-  </div>
-</div>
-
-<section id="how">
-  <div class="wrap">
-    <div class="kicker">How it works</div>
-    <h2>Type It. AI Builds It.</h2>
-    <div class="card"><div class="lab">You type</div><div class="say">“Make a shop where players buy a glowing sword with coins”</div></div>
-    <div class="arrow" aria-hidden="true">↓</div>
-    <div class="card"><div class="lab">AI writes the code</div><div class="code"><span class="k">local</span> shop = script.Parent
-shop.Touched:Connect(<span class="k">function</span>(hit)
-  <span class="k">local</span> player = <span class="f">getPlayer</span>(hit)
-  <span class="k">if</span> player.Coins.Value >= <span class="s">500</span> <span class="k">then</span>
-    <span class="f">giveSword</span>(player, <span class="s">"GlowBlade"</span>)
-  <span class="k">end</span>
-<span class="k">end</span>)</div></div>
-    <div class="steps">
-      <div><span class="n">1</span><div><h3>Type it</h3><p>Describe the game or feature in plain English.</p></div></div>
-      <div><span class="n">2</span><div><h3>Paste it</h3><p>Drop the code into Roblox Studio.</p></div></div>
-      <div><span class="n">3</span><div><h3>Play it</h3><p>Press play and it works.</p></div></div>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-noise" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-ambient" aria-hidden="true"></div>
+    <div class="hero-inner page-width">
+      <div class="hero-copy">
+        <div class="eyebrow hero-eyebrow"><span class="line-square"></span> AI CREATION / ROBLOX GAME BUSINESS <span class="eyebrow-index">001</span></div>
+        <h1 id="hero-title" class="hero-headline" aria-label="The fifty thousand dollar Roblox game opportunity"><span class="headline-line">THE <em>$50K</em></span><span class="headline-line">ROBLOX GAME</span><span class="headline-line headline-last">OPPORTUNITY<span class="dot">.</span></span></h1>
+        <p class="hero-description">Learn how to build, publish and monetise Roblox games using AI. No previous coding experience needed to get started.</p>
+        <div class="hero-actions"><button class="button button-main buy-button" type="button">GET THE COURSE <span class="cta-price">$40</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></button><span class="hero-note"><span class="small-marker"></span> ONE PAYMENT. NO SUBSCRIPTION.</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Approved CEOBLOX Roblox-style character standing with a husky">
+        <div class="halo halo-one" aria-hidden="true"></div><div class="halo halo-two" aria-hidden="true"></div><div class="halo halo-three" aria-hidden="true"></div>
+        <span class="hero-ring-label" aria-hidden="true">CREATE / PUBLISH / MONETISE</span>
+        <span class="hud hud-one" aria-hidden="true">CREATOR MODE <span>●</span> ON</span>
+        <span class="hud hud-two" aria-hidden="true">00 // BUILD YOUR WORLD</span>
+        <div class="hero-character-wrap"><img class="hero-character" src="/assets/approved-avatar-husky.webp" width="1122" height="1402" alt="3D Roblox-style character in black clothing with neon-lime accents beside a small husky" fetchpriority="high" /></div>
+      </div>
+      <div class="hero-foot"><div class="hero-features"><span>10 GUIDED LESSONS</span><span class="feature-star">✳</span><span>ONE PAYMENT</span><span class="feature-star">✳</span><span>NO SUBSCRIPTION</span></div><a href="#opportunity" class="scroll-cue"><span>SCROLL TO EXPLORE</span><span class="down-arrow" aria-hidden="true">↓</span></a></div>
     </div>
-  </div>
-  <div class="reelwrap">
-    <div class="reel" role="region" aria-label="More game examples" tabindex="0">
-      <figure class="poster" style="--c1:#b31cff;--c2:#ff2bd6"><img src="/assets/plaza.webp" width="941" height="529" alt="Town plaza" loading="lazy"><em class="tag">Social</em><figcaption><b>Town plaza</b><span>Trading and pets</span></figcaption></figure>
-      <figure class="poster" style="--c1:#ffd23a;--c2:#ff8a2b"><img src="/assets/market.webp" width="940" height="528" alt="Egg market" loading="lazy"><em class="tag">Economy</em><figcaption><b>Egg market</b><span>Hatch and trade</span></figcaption></figure>
-      <figure class="poster" style="--c1:#2be0ff;--c2:#b6ff3a"><img src="/assets/castle.webp" width="841" height="473" alt="Sky castle" loading="lazy"><em class="tag">Explore</em><figcaption><b>Sky castle</b><span>Explore map</span></figcaption></figure>
-      <figure class="poster" style="--c1:#ff3d00;--c2:#ff0066"><img src="/assets/arena.webp" width="972" height="546" alt="Battle arena" loading="lazy"><em class="tag">PvP</em><figcaption><b>Battle arena</b><span>PvP combat</span></figcaption></figure>
+  </section>
+
+  <section id="opportunity" class="section opportunity-section" aria-labelledby="opportunity-title">
+    <div class="section-glow glow-left" aria-hidden="true"></div>
+    <div class="page-width">
+      <div class="section-meta reveal"><span class="kicker">01 / THE OPPORTUNITY</span><span class="micro">NOT JUST A GAME.</span></div>
+      <h2 id="opportunity-title" class="display display-big reveal"><span>STOP JUST PLAYING.</span><span class="lime">START BUILDING.</span></h2>
+      <div class="opportunity-bottom reveal">
+        <p class="body-copy">Roblox is more than a place to play. Creators can build experiences, reach players and explore income through game passes, in-game purchases and other eligible monetisation features.</p>
+        <p class="body-copy">CEOBLOX shows you how to start creating using AI and Roblox Studio, then take the next steps towards publishing and monetising your own game.</p>
+      </div>
+      <div class="type-rail reveal"><span>BUILD THE GAME.</span><span class="type-rail-spark">✳</span><span>LEARN THE BUSINESS.</span></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="get"><div class="wrap">
-  <div class="kicker">What you get</div>
-  <h2>Everything In One Payment</h2>
-  <ul class="list">
-    <li>28 video lessons</li>
-    <li>12 AI prompts</li>
-    <li>10 modules</li>
-    <li>Lifetime access</li>
-  </ul>
-  <div class="bonus">
-    <h3>Free AI-built Roblox game .md file</h3>
-    <p>AI-built. Paste it into Roblox Studio.</p>
-    <div class="frame"><img src="/assets/bonus.webp" width="480" height="380" alt="Your free game" loading="lazy"></div>
-  </div>
-</div></section>
+  <section id="method" class="section method-section" aria-labelledby="method-title">
+    <div class="page-width">
+      <div class="section-meta reveal"><span class="kicker">02 / THE METHOD</span><span class="micro">THREE MOVES. ONE PROCESS.</span></div>
+      <div class="method-intro reveal"><h2 id="method-title" class="display">FROM GAME IDEA<br/>TO <span class="lime">GAME LAUNCH.</span></h2><p class="body-copy">A practical beginner process. No traditional coding background required.</p></div>
+      <div class="method-layout">
+        <div class="method-steps">
+          <div class="step reveal"><span class="step-index">01</span><div><h3>PICK YOUR IDEA</h3><p>Choose a simple game concept and break it into features you can build.</p></div><span class="step-arrow" aria-hidden="true">↗</span></div>
+          <div class="step reveal"><span class="step-index">02</span><div><h3>BUILD WITH AI</h3><p>Use prompts to help write Roblox Lua code, assemble your game in Roblox Studio, then test and improve it.</p></div><span class="step-arrow" aria-hidden="true">↗</span></div>
+          <div class="step reveal"><span class="step-index">03</span><div><h3>PUBLISH &amp; MONETISE</h3><p>Learn the publishing steps and discover ways Roblox creators can monetise eligible experiences.</p></div><span class="step-arrow" aria-hidden="true">↗</span></div>
+        </div>
+        <div class="demo-space reveal" aria-label="From AI prompt to playable Roblox game">
+          <div class="demo-backdrop" aria-hidden="true"><div class="demo-wire a"></div><div class="demo-wire b"></div><div class="demo-wire c"></div></div>
+          <div class="demo-label">PROMPT → GAME / 001</div>
+          <div class="demo-center"><span class="demo-emblem">&gt;_</span><strong>TYPE IT. BUILD IT. PLAY IT.</strong><span>Turn a plain-English idea into Roblox Lua code</span></div>
+          <div class="demo-bottom"><span>AI PROMPT → ROBLOX STUDIO → PLAYABLE RESULT</span><span>CREATOR MODE ON</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="price"><div class="wrap">
-  <div class="kicker">Price</div>
-  <div class="old"><s data-us="$195" data-uk="£90">$195</s></div>
-  <div class="now" data-us="$40" data-uk="£30">$40</div>
-  <div class="once">One-time. No subscription.</div>
-  <a class="btn btn-big" href="/checkout">Get started</a>
-  <div><a class="curlink" id="curlink" href="#price">Need it in £? Switch here</a></div>
-  <p class="guar">30-day money-back guarantee</p>
-  <div class="paylogos"><span>Visa</span><span>Mastercard</span><span>Apple Pay</span><span>Google Pay</span></div>
-</div></section>
+  <section id="course" class="section course-section" aria-labelledby="course-title">
+    <div class="course-watermark" aria-hidden="true">10</div>
+    <div class="page-width course-inner">
+      <div class="section-meta reveal"><span class="kicker">03 / THE COURSE</span><span class="micro">EVERYTHING YOU NEED TO START.</span></div>
+      <h2 id="course-title" class="display reveal">10 LESSONS.<br/><span class="lime">ONE CLEAR PATH.</span></h2>
+      <div class="course-description body-copy reveal">Everything is built around helping a beginner go from an idea to a playable Roblox experience, with publishing and monetisation fundamentals included.</div>
+      <div class="course-lines">
+        <div class="course-line reveal"><span class="course-line-index">01 —</span><div><h3>10 GUIDED LESSONS</h3><p>Learn the process in a clear, practical sequence.</p></div><span class="course-line-plus">+</span></div>
+        <div class="course-line reveal"><span class="course-line-index">02 —</span><div><h3>AI PROMPTS &amp; TEMPLATES</h3><p>Reusable starting points for building and improving game features.</p></div><span class="course-line-plus">+</span></div>
+        <div class="course-line reveal"><span class="course-line-index">03 —</span><div><h3>RESOURCES &amp; IDEA GENERATOR</h3><p>Supporting materials and a simple downloadable Markdown game-idea randomiser.</p></div><span class="course-line-plus">+</span></div>
+      </div>
+      <p class="course-mantra reveal">LEARN TO CREATE. <span>THEN LEARN TO LAUNCH.</span></p>
+    </div>
+  </section>
 
-<section id="faq"><div class="wrap">
-  <div class="kicker">FAQ</div>
-  <h2>Questions</h2>
-  <div class="faq">
-    <div><h3>Do I need to know how to code?</h3><p>No. The AI writes the code for you.</p></div>
-    <div><h3>Is Roblox Studio free?</h3><p>Yes. Roblox Studio is free to use.</p></div>
-    <div><h3>Is this a subscription?</h3><p>No. Pay once, keep it forever.</p></div>
-    <div><h3>What if it's not for me?</h3><p>There's a 30-day money-back guarantee.</p></div>
-  </div>
-</div></section>
-
+  <section id="offer" class="section offer-section" aria-labelledby="offer-title">
+    <div class="offer-glow" aria-hidden="true"></div>
+    <div class="page-width offer-inner">
+      <div class="section-meta reveal"><span class="kicker">04 / THE OFFER</span><span class="micro">ONE PURCHASE. A NEW SKILLSET.</span></div>
+      <h2 id="offer-title" class="display reveal">START BUILDING<br/>FOR <span class="lime">$40.</span></h2>
+      <div class="offer-layout reveal"><div class="offer-price"><span class="price-num">$40<span class="price-period">.</span></span><span class="price-label">USD / ONE TIME<br/>NO MONTHLY FEES</span></div>
+      <div class="offer-details"><p>Get the 10-lesson course, AI prompts, templates and supporting resources in one purchase. Learn how to create, publish and explore monetisation without a monthly subscription.</p><button class="button button-main button-offer buy-button" type="button">GET THE COURSE <span class="cta-price">$40</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></button><span class="offer-access">10 LESSONS · AI PROMPTS · TEMPLATES · IDEA RANDOMISER</span></div></div>
+    </div>
+    <div class="page-width faq-area" id="faq">
+      <div class="faq-heading reveal"><span class="kicker">QUESTIONS, ANSWERED.</span><span class="micro">THE ESSENTIALS.</span></div>
+      <div class="faq-items">
+        <details class="faq-item"><summary>DO I NEED CODING EXPERIENCE?<span class="faq-toggle">+</span></summary><p>No previous coding experience is required. You will still need to follow the lessons, work in Roblox Studio and test what you make.</p></details>
+        <details class="faq-item"><summary>CAN I BUILD ON MY PHONE?<span class="faq-toggle">+</span></summary><p>No. You need a compatible Windows or Mac computer to use Roblox Studio.</p></details>
+        <details class="faq-item"><summary>WILL AI BUILD EVERYTHING FOR ME?<span class="faq-toggle">+</span></summary><p>AI can help generate and improve code. You still assemble, test and refine the game in Roblox Studio.</p></details>
+        <details class="faq-item"><summary>CAN I MAKE MONEY FROM A ROBLOX GAME?<span class="faq-toggle">+</span></summary><p>Roblox offers eligible monetisation features. Earnings depend on the game, audience, platform requirements and execution. They are not guaranteed.</p></details>
+        <details class="faq-item"><summary>IS THIS A SUBSCRIPTION?<span class="faq-toggle">+</span></summary><p>No. It's a single $40 USD purchase.</p></details>
+      </div>
+    </div>
+  </section>
 </main>
-
-<footer><div class="wrap">
-  <img src="/assets/roblox-ai-logo.png" width="1400" height="316" alt="robloxai">
-  <nav class="flinks"><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/refunds">Refunds</a><a href="/contact">Contact</a></nav>
-</div></footer>
-
-<div class="sticky"><a class="btn" href="/checkout">Get started</a></div>
-
-<script>
-if(/Instagram|FBAN|FBAV|TikTok|Snapchat|Twitter|musical_ly/i.test(navigator.userAgent)){document.getElementById('wv').classList.add('on');}
-(function(){
-  var KEY='cur';
-  function set(c){
-    document.body.setAttribute('data-cur',c);
-    document.querySelectorAll('[data-us]').forEach(function(el){el.textContent=c==='uk'?el.getAttribute('data-uk'):el.getAttribute('data-us');});
-    var l=document.getElementById('curlink');
-    if(l)l.textContent=c==='uk'?'Need it in $? Switch here':'Need it in £? Switch here';
-    try{localStorage.setItem(KEY,c)}catch(e){}
-  }
-  var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
-  set(saved==='uk'?'uk':'us');
-  document.getElementById('curlink').addEventListener('click',function(e){e.preventDefault();set(document.body.getAttribute('data-cur')==='uk'?'us':'uk');});
-
-  var heroBtn=document.querySelector('.hero .btn-big'),st=document.querySelector('.sticky');
-  if(heroBtn&&st&&'IntersectionObserver' in window){
-    new IntersectionObserver(function(en){en.forEach(function(x){st.classList.toggle('show',!x.isIntersecting&&x.boundingClientRect.top<0);});},{threshold:0}).observe(heroBtn);
-  }
-})();
-</script>
+<footer class="footer"><div class="page-width footer-inner"><div><a href="#top" class="footer-brand"><img src="/assets/ceoblox-wordmark-white.webp" width="1722" height="231" alt="CEOBLOX"/></a><p>CREATE. PUBLISH. MONETISE.</p></div><div class="footer-right"><span>INDEPENDENT EDUCATIONAL COURSE.<br/>NOT AFFILIATED WITH OR ENDORSED BY ROBLOX CORPORATION.</span><nav class="footer-links" aria-label="Legal"><a href="/terms">TERMS</a><a href="/privacy">PRIVACY</a><a href="/refunds">REFUNDS</a><a href="/contact">CONTACT</a></nav></div></div></footer>
+<div class="mobile-cta" id="mobile-cta" aria-label="Purchase course"><button class="button button-main buy-button" type="button">GET THE COURSE <span class="cta-price">$40</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></button></div>
+<dialog id="checkout-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" class="checkout-dialog"><button class="dialog-close" type="button" aria-label="Close checkout message">×</button><div class="dialog-eyebrow">CEOBLOX / CHECKOUT</div><h2 id="dialog-title">CHECKOUT OPENS SOON.</h2><p id="dialog-desc">Secure checkout is opening shortly. No payment has been taken. Please check back soon to get the course for $40.</p><button class="button button-main dialog-done" type="button">BACK TO THE WEBSITE <span aria-hidden="true">↗</span></button></dialog>
 </body>
 </html>
