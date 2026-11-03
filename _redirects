@@ -1,5 +1,0 @@
-# Old mock checkout routes did not process payment. Send visitors to the offer instead.
-/pay        /#offer  301
-/checkout   /#offer  301
-/thanks     /#offer  301
-/files/*    /        301
