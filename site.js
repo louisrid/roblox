@@ -38,25 +38,32 @@
       if (dialog && typeof dialog.showModal === 'function') {
         dialog.showModal();
         document.body.classList.add('modal-open');
+        update();
         closeButton?.focus();
       }
     });
   }
   closeButton?.addEventListener('click',closeDialog);
   backButton?.addEventListener('click',closeDialog);
-  dialog?.addEventListener('close',()=>{document.body.classList.remove('modal-open');});
+  dialog?.addEventListener('close',()=>{document.body.classList.remove('modal-open');update();});
   dialog?.addEventListener('click',(e)=>{if(e.target===dialog)closeDialog();});
 
   const heroButton = document.querySelector('.hero-actions .buy-button');
-  const offerButton = document.querySelector('.offer-details .buy-button');
+  const mainButtons = [...document.querySelectorAll('main .buy-button')];
   const update = () => {
     const max = document.documentElement.scrollHeight - window.innerHeight;
     if (progress) progress.style.width = max>0 ? (window.scrollY/max*100).toFixed(2)+'%': '0%';
-    // Show the mobile purchase shortcut between the first hero CTA and the final offer CTA.
-    if (sticky && heroButton && offerButton) {
-      const heroPassed = heroButton.getBoundingClientRect().bottom < 0;
-      const offerReached = offerButton.getBoundingClientRect().top < window.innerHeight;
-      sticky.classList.toggle('is-shown', heroPassed && !offerReached && !dialog?.open);
+    // Follow the hero button; defer to any visible main purchase action or dialog.
+    if (sticky && heroButton) {
+      const headerBottom = document.getElementById('site-header').getBoundingClientRect().bottom;
+      const heroPassed = heroButton.getBoundingClientRect().bottom <= headerBottom;
+      const anotherVisible = mainButtons.some(button => {
+        const rect = button.getBoundingClientRect();
+        return rect.bottom > headerBottom && rect.top < window.innerHeight;
+      });
+      const show = heroPassed && !anotherVisible && !dialog?.open;
+      sticky.classList.toggle('is-shown', show);
+      sticky.inert = !show;
     }
   };
   let ticking = false;
@@ -67,7 +74,7 @@
   const revealItems = document.querySelectorAll('.reveal');
   if (!prefersReduced && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries)=>{
-      for (const e of entries) if(e.isIntersecting){e.target.classList.add('is-visible');observer.unobserve(e.target);}
+      for (const e of entries) if(e.isIntersecting){e.target.animate([{opacity:.65,transform:'translateY(12px)'},{opacity:1,transform:'none'}],{duration:450,easing:'ease-out'});observer.unobserve(e.target);}
     },{threshold:.1,rootMargin:'0px 0px -28px 0px'});
     revealItems.forEach(el=>observer.observe(el));
   } else {revealItems.forEach(el=>el.classList.add('is-visible'));}
