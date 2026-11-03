@@ -3,3 +3,13 @@
 /checkout   /#offer  301
 /thanks     /#offer  301
 /files/*    /        301
+
+# Keep previously published legal URLs working with the supplied directory pages.
+/terms.html /terms/ 301
+/terms /terms/ 301
+/privacy.html /privacy/ 301
+/privacy /privacy/ 301
+/refunds.html /refunds/ 301
+/refunds /refunds/ 301
+/contact.html /contact/ 301
+/contact /contact/ 301
