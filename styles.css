@@ -473,21 +473,50 @@ body :is(.button,.button-sm,#course-cta,#checkout-cta){
   border:1px solid #000000;
   border-radius:7px;
 }
-body .header-right :is(.button,.button-sm){--button-height:55px}
+body .header-right :is(.button,.button-sm){--button-height:40px}
 body #checkout-cta{--button-height:64px}
 body :is(.button,.button-sm,#course-cta,#checkout-cta):is(:hover,:active,:focus-visible,:disabled){border-color:#000000}
 @media(max-width:800px){
   body :is(.button,.button-sm,#course-cta,#checkout-cta){--button-height:78px}
-  body .header-right :is(.button,.button-sm){--button-height:53px}
+  body .header-right :is(.button,.button-sm){--button-height:38px}
   body #checkout-cta{--button-height:60px}
 }
 @media(max-width:520px){
   body :is(.button,.button-sm,#course-cta,#checkout-cta){--button-height:74px}
-  body .header-right :is(.button,.button-sm){--button-height:47px}
+  body .header-right :is(.button,.button-sm){--button-height:36px}
   body #checkout-cta{--button-height:52px}
 }
 @media(max-width:350px){
   body :is(.button,.button-sm,#course-cta,#checkout-cta){--button-height:66px}
-  body .header-right :is(.button,.button-sm){--button-height:44px}
+  body .header-right :is(.button,.button-sm){--button-height:36px}
   body #checkout-cta{--button-height:48px}
+}
+
+/* Roomier header and a high-contrast return action on the join page. */
+.site-header{height:auto;min-height:96px;padding-block:22px}
+.header-inner{min-height:52px}
+body .header-right .back-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:12px 18px;
+  border:1px solid #000000;
+  border-radius:7px;
+  background:#FFFFFF;
+  color:#000000;
+  font-size:14px;
+  line-height:1.2;
+  white-space:nowrap;
+  transition:background .18s ease,transform .18s ease;
+}
+body .header-right .back-link:visited{color:#000000}
+body .header-right .back-link:hover{background:#EEEEEE;transform:translateY(-2px)}
+body .header-right .back-link:active{transform:translateY(0)}
+@media(max-width:800px){
+  .site-header{min-height:84px;padding-block:20px}
+  .header-inner{min-height:44px;gap:12px}
+}
+@media(max-width:350px){
+  body .header-right .back-link{padding-inline:12px;font-size:12px}
 }
