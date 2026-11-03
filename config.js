@@ -1,9 +1,5 @@
-/** CEOBLOX integration configuration.
- * Private draft: intentionally no production checkout or tracking is configured.
- * Set a verified external processor URL ONLY after completing a paid-order test.
- * Never point it to the former /pay or /thanks routes: those did not process payment.
+/** Configure only after a verified production processor and a real paid-order test.
+ * Former /pay and /thanks URLs were not payment processors.
+ * Optional existing Meta Pixel may be installed independently; never invent a Pixel ID.
  */
-window.CEOBLOX_CONFIG = {
-  checkoutUrl: "",
-  previewOnly: true
-};
+window.CEOBLOX_CONFIG = { checkoutUrl: '', previewOnly: true };
